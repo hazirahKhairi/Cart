@@ -13,35 +13,28 @@
         <dt>
             @Html.DisplayNameFor(model => model.Category.Name)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Category.Name)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Name)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Description)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Description)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Price)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Price)
         </dd>
-   
+       
         <dt>
             Quantity:
         </dt>
@@ -52,6 +45,7 @@
                 @Html.HiddenFor(model => model.ID)
                 @Html.DropDownList("quantity", Enumerable.Range(1, 10).Select(i => new
                 SelectListItem { Text = i.ToString(), Value = i.ToString() }))
+                <br /><br />
                 <input type="submit" class="btn btn-primary btn-xs" value="Add to Basket">
             }
         </dd>
@@ -60,4 +54,4 @@
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
-</p>
+</p> 
